@@ -1,0 +1,27 @@
+h1 書評管理
+
+.nav.justify-content-end
+ = link_to '一覧', reviews_path, class: 'nav-link'
+table.table.table-hover
+ tbody
+  tr
+   th= Review.human_attribute_name(:id)
+   td= @review.id
+  tr
+   th= Review.human_attribute_name(:title)
+   td= @review.title
+  tr
+   th= Review.human_attribute_name(:author)
+   td= @review.author
+  tr
+   th= Review.human_attribute_name(:description)
+   td= simple_format(h(@review.description), {}, sanitize: false, wrapper_tag: "div")
+  tr
+   th= Review.human_attribute_name(:created_at)
+   td= @review.created_at
+  tr
+   th= Review.human_attribute_name(:updated_at)
+   td= @review.updated_at
+
+= link_to '編集', edit_review_path, class: 'btn btn-primary mr-3'
+= link_to '削除', @review, method: :delete, data: { confirm: "書評「#{@review.title}」削除します。よろしいですか？" }, class: 'btn btn-danger'
