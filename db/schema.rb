@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200623102516) do
+ActiveRecord::Schema.define(version: 20200625095330) do
 
   create_table "reviews", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "title"
+    t.string "title", limit: 30, null: false
     t.string "author"
     t.text "description"
     t.datetime "created_at", null: false
