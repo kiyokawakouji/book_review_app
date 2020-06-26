@@ -16,9 +16,13 @@ class ReviewsController < ApplicationController
  end
 
  def create
-  review = Review.new(review_params)
-  review.save!
-  redirect_to reviews_url, notice: "書評「#{review.title}」を投稿しました"
+  @review = Review.new(review_params)
+
+  if @review.save
+   redirect_to @review, notice: "書評「#{@review.title}」を投稿しました"
+  else
+   render :new
+  end
  end
 
  def update
