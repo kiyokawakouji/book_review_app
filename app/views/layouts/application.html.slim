@@ -11,5 +11,8 @@ html
     .container
      - if flash.notice.present?
       .alert.alert-success= flash.notice
-    = yield
+
+    p class="notice" = notice
+    p class="alert" = alert
+= yield
 
