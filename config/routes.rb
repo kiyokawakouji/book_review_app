@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  resources :sessions, :only => [:create]
+
+  root to: 'reviews#new'
   
-  root to: 'reviews#index'
   devise_for :users, :controllers => {
     :registrations => 'users/registrations',
     :sessions => 'users/sessions'   
@@ -8,7 +10,7 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     get "sign_in", :to => "users/sessions#new"
-    get "sign_out", :to => "users/sessions#destroy" 
+    delete "log_out", :to => "users/sessions#destroy" 
   end
   resources :reviews
 end

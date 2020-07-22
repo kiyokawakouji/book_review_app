@@ -10,6 +10,11 @@ ja:
       review: レビュー
 
     attributes:
+      user:
+        email: メールアドレス
+        password: パスワード
+        remember_me: 次回から自動的にログインする
+        log_in: ログインする
       review:
         id: ID
         author: 著者

@@ -5,4 +5,8 @@ class User < ApplicationRecord
 
   #emailとpassがその確認用の入力と一致しているか？
   validates :email, :encrypted_password, confirmation: true
+
+  def remember_me
+    true
+  end
 end

@@ -4,6 +4,9 @@ class ApplicationController < ActionController::Base
   # ログイン済ユーザーのみにアクセスを許可する
   before_action :authenticate_user!
 
+
+  protected
+  
   def after_sign_in_path_for(resource)
     reviews_path # ログイン後に遷移するpathを設定
   end
