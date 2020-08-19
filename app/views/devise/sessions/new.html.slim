@@ -1,4 +1,4 @@
-h1 ログイン画面(仮名)
+h1 ログイン画面
 
 = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
   .field
@@ -16,5 +16,4 @@ h1 ログイン画面(仮名)
   .actions
     = f.submit t('activerecord.attributes.user.log_in')
 
-/ = link_to '新規登録', registration_path, class: 'btn btn-primary'
-= render "devise/shared/links"
+/= render 'devise/shared/links'

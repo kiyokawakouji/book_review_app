@@ -34,7 +34,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.1]
 
       t.string :name
       t.string :email
-      t.string :password_digest
+      #t.string :password_digest deviseを実装する場合不要になる
 
       t.timestamps null: false
     end

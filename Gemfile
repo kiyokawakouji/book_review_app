@@ -13,10 +13,15 @@ gem 'uglifier',     '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks',   '~> 5'
 gem 'jbuilder',     '~> 2.5'
+gem 'bcrypt',       '~> 3.1.7'
+
 gem 'slim-rails'
 gem 'html2slim'
-gem 'bootstrap'
-gem 'bcrypt',       '~> 3.1.7'
+
+gem 'bootstrap', '~> 4.4.1'
+gem 'jquery-rails'
+gem 'devise-bootstrap-views', '~> 1.0'
+
 gem 'devise'
 gem 'devise-i18n'
 gem 'devise-i18n-views'

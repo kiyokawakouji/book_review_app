@@ -1,0 +1,1 @@
+BookReviewApp::Application.config.session_store :cookie_store, key: 'book_review_app_session', expire_after: 1.week

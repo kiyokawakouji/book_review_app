@@ -1,18 +1,18 @@
 doctype html
 html
   head
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
     title
       | BookReviewApp
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
-    .app-title.navbar.navbar-expand-md.navbar-light.bg-ligth.navbar-brand BookReviewApp
-    .container
-     - if flash.notice.present?
-      .alert.alert-success= flash.notice
+   /= render 'devise/shared/header'
 
-    p class="notice" = notice
-    p class="alert" = alert
+   /p class="notice" = notice
+   /p class="alert" = alert
+
+   = render 'devise/shared/header'
 = yield
 
