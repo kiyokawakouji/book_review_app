@@ -8,10 +8,14 @@ html
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
-   /= render 'devise/shared/header'
+   .app-title.navbar.navbar-expand-md.navbar-light.bg-ligth
+    .navbar-brand BookReviewApp
+   .container
+    - if flash.notice.present?
+     .alert.alert-success= flash.notice
 
-   /p class="notice" = notice
-   /p class="alert" = alert
+    p class="notice" = notice
+    p class="alert" = alert
 
    = render 'devise/shared/header'
 = yield
