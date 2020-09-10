@@ -1,6 +1,10 @@
 @import "bootstrap";
 
-// ログイン画面
+<<<<<<< HEAD
+
+=======
+ // ログイン画面
+>>>>>>> feature/branch
 
 .container-login {
     @extend .container-fluid;
@@ -8,7 +12,11 @@
     padding: 2rem;
   }
   
-// 「ログインしました」などのフラッシュ用スタイル
+<<<<<<< HEAD
+
+=======
+ // 「ログインしました」などのフラッシュ用スタイル
+>>>>>>> feature/branch
   
   .alert-notice {
     @extend .alert-info;
@@ -16,4 +24,8 @@
   
   .alert-alert {
     @extend .alert-danger;
+<<<<<<< HEAD
+
+=======
   }
+>>>>>>> feature/branch
