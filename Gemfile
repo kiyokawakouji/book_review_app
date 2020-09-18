@@ -32,6 +32,9 @@ group :development, :test do
   gem 'factory_bot_rails', '~> 4.11'
   gem 'capybara',          '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'letter_opener_web' 
 end
 
 group :development do

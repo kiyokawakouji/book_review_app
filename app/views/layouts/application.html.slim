@@ -18,5 +18,8 @@ html
     p class="alert" = alert
 
    = render 'devise/shared/header'
+   - if user_signed_in?
+    p= link_to "ログアウト", destroy_user_session_path, method: :delete
+
 = yield
 
