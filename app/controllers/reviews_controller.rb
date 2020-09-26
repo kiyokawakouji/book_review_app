@@ -1,29 +1,31 @@
 class ReviewsController < ApplicationController
+
  def index
   @reviews = Review.all
- end
-
- def show
-  @review = Review.find(params[:id])
  end
 
  def new
   @review = Review.new
  end
 
- def edit
-  @review = Review.find(params[:id])
- end
-
  def create
   @review = Review.new(review_params)
-
+  @review.user_id = cuurent_user.id  
   if @review.save
    redirect_to @review, notice: "書評「#{@review.title}」を投稿しました"
   else
    render :new
   end
  end
+
+ def show
+  @review = Review.find(params[:id])
+ end
+
+ def edit
+  @review = Review.find(params[:id])
+ end
+
 
  def update
   review = Review.find(params[:id])

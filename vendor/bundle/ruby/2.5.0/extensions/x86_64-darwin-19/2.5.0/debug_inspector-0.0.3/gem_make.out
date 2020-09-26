@@ -1,0 +1,15 @@
+current directory: /Users/kiyokawakouji/Rails-app/book_review_app/vendor/bundle/ruby/2.5.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+/Users/kiyokawakouji/.rbenv/versions/2.5.7/bin/ruby -I /Users/kiyokawakouji/.rbenv/versions/2.5.7/lib/ruby/site_ruby/2.5.0 -r ./siteconf20200926-3620-1m9eck2.rb extconf.rb
+creating Makefile
+
+current directory: /Users/kiyokawakouji/Rails-app/book_review_app/vendor/bundle/ruby/2.5.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR=" clean
+
+current directory: /Users/kiyokawakouji/Rails-app/book_review_app/vendor/bundle/ruby/2.5.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR="
+compiling debug_inspector.c
+linking shared-object debug_inspector.bundle
+
+current directory: /Users/kiyokawakouji/Rails-app/book_review_app/vendor/bundle/ruby/2.5.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 debug_inspector.bundle ./.gem.20200926-3620-1erfcew
