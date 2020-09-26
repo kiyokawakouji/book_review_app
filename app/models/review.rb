@@ -1,4 +1,5 @@
 class Review < ApplicationRecord
-    validates :title, presence: true
-    validates :title, length: { maximum: 30 }
+  validates :title, presence: true
+  validates :title, length: { maximum: 30 }
+  belongs_to :user
 end

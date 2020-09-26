@@ -1,0 +1,19 @@
+current directory: /Users/kiyokawakouji/Rails-app/book_review_app/vendor/bundle/ruby/2.5.0/gems/byebug-11.1.3/ext/byebug
+/Users/kiyokawakouji/.rbenv/versions/2.5.7/bin/ruby -I /Users/kiyokawakouji/.rbenv/versions/2.5.7/lib/ruby/site_ruby/2.5.0 -r ./siteconf20200926-3620-1kpul1y.rb extconf.rb
+creating Makefile
+
+current directory: /Users/kiyokawakouji/Rails-app/book_review_app/vendor/bundle/ruby/2.5.0/gems/byebug-11.1.3/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /Users/kiyokawakouji/Rails-app/book_review_app/vendor/bundle/ruby/2.5.0/gems/byebug-11.1.3/ext/byebug
+make "DESTDIR="
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.bundle
+
+current directory: /Users/kiyokawakouji/Rails-app/book_review_app/vendor/bundle/ruby/2.5.0/gems/byebug-11.1.3/ext/byebug
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.bundle ./.gem.20200926-3620-1stedls/byebug

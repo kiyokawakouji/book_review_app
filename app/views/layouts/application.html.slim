@@ -17,7 +17,7 @@ html
     p class="notice" = notice
     p class="alert" = alert
 
-   = render 'devise/shared/header'
+   = render "devise/shared/header"
    - if user_signed_in?
     p= link_to "ログアウト", destroy_user_session_path, method: :delete
 
