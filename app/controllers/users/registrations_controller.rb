@@ -1,33 +1,15 @@
 class Users::RegistrationsController < Devise::RegistrationsController
- 
- def new
-  super
-  @user = User.new
- end
- 
- def create
-  super
+
+protected
+ # 新規登録後のリダイレクト先
+ def after_sign_up_path_for(resource)
+  flash[:notice] = "新規登録完了しました"
+  reviews_path(resource)
  end
 
-  # protected
-
-  # If you have extra params to permit, append them to the sanitizer.
-  # def configure_sign_up_params
-  #   devise_parameter_sanitizer.permit(:sign_up, keys: [:attribute])
-  # end
-
-  # If you have extra params to permit, append them to the sanitizer.
-  # def configure_account_update_params
-  #   devise_parameter_sanitizer.permit(:account_update, keys: [:attribute])
-  # end
-
-  # The path used after sign up.
-  # def after_sign_up_path_for(resource)
-  #   super(resource)
-  # end
-
-  # The path used after sign up for inactive accounts.
-  # def after_inactive_sign_up_path_for(resource)
-  #   super(resource)
-  # end
+ # アカウント変更後のリダイレクト先
+ def after_update_path_for(resource)
+  flash[:notice] = "アカウントを編集しました"
+  root_path(resource)
+ end
 end

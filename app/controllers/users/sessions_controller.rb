@@ -1,18 +1,15 @@
 class Users::SessionsController < Devise::SessionsController
 
- def new
-  super
-  @user = User.new
- end
- 
- def create
-  super
+protected
+ # ログイン後のリダイレクト先
+ def after_sign_in_path_for(resource)
+  flash[:notice] = "ログインに成功しました"
+  reviews_path(resource)
  end
 
-  # protected
-
-  # If you have extra params to permit, append them to the sanitizer.
-  # def configure_sign_in_params
-  #   devise_parameter_sanitizer.permit(:sign_in, keys: [:attribute])
-  # end
+ # ログアウト後のリダイレクト先
+ def after_sign_out_path_for(resource)
+  flash[:notice] = "ログアウトしました"
+  root_path(resource)
+ end 
 end

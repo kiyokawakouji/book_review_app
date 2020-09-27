@@ -8,9 +8,6 @@ html
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
-<<<<<<< HEAD
-   
-=======
    .app-title.navbar.navbar-expand-md.navbar-light.bg-ligth
     .navbar-brand BookReviewApp
    .container
@@ -19,11 +16,9 @@ html
 
     p class="notice" = notice
     p class="alert" = alert
->>>>>>> feature/branch
 
    = render "devise/shared/header"
    - if user_signed_in?
-    p= link_to "ログアウト", destroy_user_session_path, method: :delete
-
+     p= link_to "ログアウト", destroy_user_session_path, method: :delete
 = yield
 

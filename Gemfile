@@ -19,13 +19,14 @@ gem 'config'
 gem 'slim-rails'
 gem 'html2slim'
 
+gem 'devise'
+gem 'devise-i18n'
+gem 'devise-i18n-views'
+
 gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
 gem 'devise-bootstrap-views', '~> 1.0'
 
-gem 'devise'
-gem 'devise-i18n'
-gem 'devise-i18n-views'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

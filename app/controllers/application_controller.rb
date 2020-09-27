@@ -3,31 +3,13 @@ class ApplicationController < ActionController::Base
  # ログイン済ユーザーのみにアクセスを許可する
  before_action :authenticate_user!
 
+ before_action :configure_permitted_parameters, if: :devise_controller?
 
+protected
 
-
-
- protected
-
- #新規登録後のリダイレクト先
- def after_sign_up_path_for(resource)
-  flash[:notice] = "ログインしました"
-  reviews_path
- end
-    
- #ログイン後のリダイレクト先
- def after_sign_in_path_for(resource)
-  reviews_path
- end 
-
- #ログアウト後のリダイレクト先
- def after_sign_out_path_for(resource)
-  flash[:notice] = "ログアウトしました"
-  new_user_session_path
- end 
-
- #アカウント変更後のリダイレクト先
- def after_update_path_for(resource)
-  homes_path
+def configure_permitted_parameters
+  devise_parameter_sanitizer.permit(:sign_in, keys: [:name])  
+  devise_parameter_sanitizer.permit(:sign_up, keys: [:name])  
+  devise_parameter_sanitizer.permit(:account_update, keys: [:name])
  end
 end
