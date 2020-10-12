@@ -4,9 +4,9 @@ describe 'レビュー管理機能', type: :system do
     describe '一覧表示機能' do
         before do 
         # ユーザーAを作成しておく
-        user_a = FactoryBot.create(user, name: 'ユーザーA', email: 'a@example.com')
+        user_a = create(:user, name: 'ユーザーA', email: 'a@example.com')
         # 作者がユーザーAであるレビューを作成しておく
-        FactoryBot.create(:review, name: '最初のレビュー', user: user_a)
+        create(:review, name: '最初のレビュー', user: user_a)
         end
 
 context 'ユーザーがログインしているとき' do

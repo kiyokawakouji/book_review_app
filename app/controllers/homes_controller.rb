@@ -6,14 +6,13 @@ class HomesController < ApplicationController
   @user = current_user.id
  end
 
- def new
- end
-
- def show
-  @user = current_user
- end
-
  def create
+  user = User.find(params[:id])
+  if user.save
+   redirect_to root_path, notice: "ユーザーを作成しました"
+  else
+   render :new
+  end
  end
  
 end
