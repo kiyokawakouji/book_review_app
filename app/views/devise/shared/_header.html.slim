@@ -1,8 +1,0 @@
-/ ユーザーがログインしている場合に実行する処理
-- if user_signed_in?
- = link_to "Account update", edit_user_registration_path
- = link_to "Log out", destroy_user_session_path, method: :delete
-/ ユーザーがログアウトしている場合に実行する処理(消すかどうかはレイアウト考慮してから)
-- else
- = link_to "Sign in", new_user_registration_path
- = link_to "Log in", new_user_session_path

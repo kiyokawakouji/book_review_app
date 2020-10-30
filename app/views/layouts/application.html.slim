@@ -14,11 +14,7 @@ html
     - if flash.notice.present?
      .alert.alert-success= flash.notice
 
-    p class="notice" = notice
-    p class="alert" = alert
-
    = render "devise/shared/header"
-   - if user_signed_in?
-     p= link_to "ログアウト", destroy_user_session_path, method: :delete
+   
 = yield
 

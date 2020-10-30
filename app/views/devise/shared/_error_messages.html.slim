@@ -1,8 +1,0 @@
-- flash.each do |name, msg|
-  #alert class=("alert alert-#{name}") role="alert" 
-    a.close data-dismiss="alert" href="#"  ×
-    = msg
-
-= I18n.t("errors.messages.not_saved",                 
-  count: resource.errors.count,                       
-  resource: resource.class.model_name.human.downcase) 

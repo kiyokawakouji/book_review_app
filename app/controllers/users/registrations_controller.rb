@@ -1,35 +1,45 @@
+# frozen_string_literal: true
+
 class Users::RegistrationsController < Devise::RegistrationsController
+ # before_action :configure_sign_up_params, only: [:create]
+ # before_action :configure_account_update_params, only: [:update]
+ before_action :configure_permitted_parameters
 
- def create
-  super
- end
-
+  # GET /resource/sign_up
  def new
+  # ログインしていたらrootに飛ばす
+  redirect_to :root if user_signed_in?
   super
  end
 
- def edit
-  super
- end
+  # POST /resource
+  def create
+   super
+  end
 
- def update
-  super
- end
+  # GET /resource/edit
+  # def edit
+  #   super
+  # end
 
- def destroy
-  super
- end
+  # PUT /resource
+  # def update
+  #   super
+  # end
 
-protected
- # 新規登録後のリダイレクト先
+  # DELETE /resource
+  # def destroy
+  #   super
+  # end
+
+  protected
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:name])
+  end
+  # The path used after sign up.
  def after_sign_up_path_for(resource)
-  flash[:notice] = "新規登録完了しました"
-  index_reviews_path(resource)
- end
-
- # アカウント変更後のリダイレクト先
- def after_update_path_for(resource)
-  flash[:notice] = "アカウントを編集しました"
-  root_path(resource)
+  reviews_index_path
  end
 end
