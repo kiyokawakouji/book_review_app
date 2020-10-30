@@ -13,18 +13,19 @@ gem 'uglifier',     '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks',   '~> 5'
 gem 'jbuilder',     '~> 2.5'
-gem 'bcrypt',       '~> 3.1.7'
+gem 'config'
 
 gem 'slim-rails'
 gem 'html2slim'
+
+gem 'devise'
+gem 'devise-i18n'
+gem 'devise-i18n-views'
 
 gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
 gem 'devise-bootstrap-views', '~> 1.0'
 
-gem 'devise'
-gem 'devise-i18n'
-gem 'devise-i18n-views'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -32,6 +33,8 @@ group :development, :test do
   gem 'factory_bot_rails', '~> 4.11'
   gem 'capybara',          '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'webdrivers'
+  gem 'shoulda-matchers', git: 'https://github.com/thoughtbot/shoulda-matchers.git', branch: 'rails-5'
 end
 
 group :development do
@@ -39,4 +42,8 @@ group :development do
   gem 'listen',      '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring-commands-rspec'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'letter_opener_web'
 end

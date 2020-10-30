@@ -11,10 +11,12 @@ ja:
 
     attributes:
       user:
+        name: 名前
         email: メールアドレス
         password: パスワード
         remember_me: 次回から自動的にログインする
         log_in: ログインする
+        sign_up: 新規登録
       review:
         id: ID
         author: 著者

@@ -1,19 +1,2 @@
-@import "bootstrap";
-
-// ログイン画面
-
-.container-login {
-    @extend .container-fluid;
-    max-width: 576px;
-    padding: 2rem;
-  }
-  
-// 「ログインしました」などのフラッシュ用スタイル
-  
-  .alert-notice {
-    @extend .alert-info;
-  }
-  
-  .alert-alert {
-    @extend .alert-danger;
-  }
+ // reviewpage用のbootstrap
+ @import "bootstrap";
