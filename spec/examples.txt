@@ -1,0 +1,27 @@
+example_id                                        | status  | run_time        |
+------------------------------------------------- | ------- | --------------- |
+./spec/helpers/homes_helper_spec.rb[1:1]          | pending | 0.00002 seconds |
+./spec/helpers/reviews_helper_spec.rb[1:1]        | pending | 0.00001 seconds |
+./spec/models/review_spec.rb[1:1]                 | pending | 0.00002 seconds |
+./spec/models/user_spec.rb[1:1]                   | pending | 0.00002 seconds |
+./spec/models/user_spec.rb[1:2:1:1]               | passed  | 0.57372 seconds |
+./spec/models/user_spec.rb[1:2:1:2]               | passed  | 0.00469 seconds |
+./spec/models/user_spec.rb[1:2:1:3:1]             | failed  | 0.0011 seconds  |
+./spec/models/user_spec.rb[1:2:2:1]               | passed  | 0.00846 seconds |
+./spec/models/user_spec.rb[1:2:2:2]               | passed  | 0.01308 seconds |
+./spec/models/user_spec.rb[1:2:3:1:1]             | failed  | 0.00289 seconds |
+./spec/models/user_spec.rb[1:2:4:1]               | failed  | 0.0026 seconds  |
+./spec/requests/homes_request_spec.rb[1:1:1]      | failed  | 0.02544 seconds |
+./spec/requests/reviews_request_spec.rb[1:1:1]    | failed  | 0.05991 seconds |
+./spec/requests/reviews_request_spec.rb[1:2:1]    | failed  | 0.00673 seconds |
+./spec/requests/reviews_request_spec.rb[1:3:1]    | failed  | 0.00813 seconds |
+./spec/requests/reviews_request_spec.rb[1:4:1]    | failed  | 0.00854 seconds |
+./spec/system/reviews_spec.rb[1:1:1:1]            | failed  | 3.66 seconds    |
+./spec/system/reviews_spec.rb[1:2:1:1]            | failed  | 4.41 seconds    |
+./spec/system/reviews_spec.rb[1:2:2:1]            | failed  | 2.43 seconds    |
+./spec/views/homes/index.html.slim_spec.rb[1:1]   | pending | 0.00002 seconds |
+./spec/views/homes/show.html.slim_spec.rb[1:1]    | pending | 0.00002 seconds |
+./spec/views/reviews/edit.html.slim_spec.rb[1:1]  | pending | 0.00002 seconds |
+./spec/views/reviews/index.html.slim_spec.rb[1:1] | pending | 0.00001 seconds |
+./spec/views/reviews/new.html.slim_spec.rb[1:1]   | pending | 0.00001 seconds |
+./spec/views/reviews/show.html.slim_spec.rb[1:1]  | pending | 0.00003 seconds |
