@@ -14,11 +14,13 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks',   '~> 5'
 gem 'jbuilder',     '~> 2.5'
 gem 'config'
+gem 'dotenv-rails'
 
 gem 'slim-rails'
 gem 'html2slim'
 
 gem 'devise'
+gem 'omniauth-google-oauth2'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
 
