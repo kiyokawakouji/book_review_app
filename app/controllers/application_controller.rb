@@ -3,10 +3,15 @@ class ApplicationController < ActionController::Base
  # ログイン済ユーザーのみにアクセスを許可する
  before_action :authenticate_user!
  # deviseの画面にいったら、parameterをモデルに渡すアクションを実行する
- # before_action :configure_permitted_parameters, if: :devise_controller?
+ before_action :configure_permitted_parameters, if: :devise_controller?
  # prepend_before_action :require_no_authentication, only: [:new, :create, :cancel]
 
 
  protected
+ def configure_permitted_parameters
+  devise_parameter_sanitizer.permit(:sign_in, keys: [:name])  
+  devise_parameter_sanitizer.permit(:sign_up, keys: [:name])  
+  devise_parameter_sanitizer.permit(:account_update, keys: [:name])
+ end
 
 end
