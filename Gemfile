@@ -13,7 +13,6 @@ gem 'uglifier',     '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks',   '~> 5'
 gem 'jbuilder',     '~> 2.5'
-gem 'config'
 gem 'dotenv-rails', require: 'dotenv/rails-now'
 
 gem 'slim-rails'
@@ -48,5 +47,4 @@ group :development do
   gem 'spring-commands-rspec'
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'letter_opener_web'
 end

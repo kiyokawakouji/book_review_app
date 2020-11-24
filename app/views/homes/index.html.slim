@@ -1,3 +1,4 @@
 h1 Homes#index
 p Find me in app/views/homes/index.html.slim
-= render "reviews/index"
+= render "devise/shared/header"
+= link_to "Log out", destroy_user_session_path, method: :delete

@@ -4,7 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: %i[google_oauth2]
-  
+  has_many :reviews
+  has_many :sns_credentials, dependent: :destroy
+
  protected
  # コールバックを受けた時にユーザが既にアプリケーションの中で認知されているかどうかを判断する
  def self.from_omniauth(access_token) 

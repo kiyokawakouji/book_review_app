@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
- root to: "reviews#index"
+ root to: "homes#index"
 
  devise_for :users, controllers: { 
   sessions: 'users/sessions',
@@ -9,14 +9,14 @@ Rails.application.routes.draw do
  }
 
  devise_scope :user do
-   delete '/users/sign_out' => 'devise/sessions#destroy'
-   delete '/users/log_out'  => 'devise/sessions#destroy'
+  get "user/:id", :to => "users/registrations#detail"
+  get "signup", :to => "users/registrations#new"
+  get "login", :to => "users/sessions#new"
+  get "logout", :to => "users/sessions#destroy"
  end
  
  resources :users
  resources :reviews
+ resources :homes
 
- if Rails.env.development?  
-  mount LetterOpenerWeb::Engine, at: "/letter_opener" 
- end
 end

@@ -10,11 +10,12 @@ html
   body
    .app-title.navbar.navbar-expand-md.navbar-light.bg-ligth
     .navbar-brand BookReviewApp
+    
    .container
     - if flash.notice.present?
      .alert.alert-success= flash.notice
 
-= render "devise/shared/header"
+/= render "devise/shared/header"
    
 = yield
 
